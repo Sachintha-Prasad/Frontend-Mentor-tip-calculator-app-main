@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+@layer components {
+    .tip-btn {
+        @apply bg-very-dark-cyan text-white hover:bg-light-grayish-cyan hover:text-very-dark-cyan focus:bg-strong-cyan focus:text-very-dark-cyan focus-within:ring-strong-cyan focus-within:ring-2 outline-none min-w-[80px] p-2 rounded-md text-lg;
+    }
+
+    .input-box {
+        @apply bg-very-light-grayish-cyan flex items-center justify-start p-2 rounded-md focus-within:ring-strong-cyan focus-within:ring-2;
+    }
+
+    .input {
+        @apply bg-very-light-grayish-cyan text-very-dark-cyan w-full text-lg text-right focus:outline-none;
+    }
+}
+
+.active {
+    background-color: hsl(172 67% 45%);
+    color: hsl(183 100% 15%);
+}
+
+.active:hover {
+    background-color: hsl(172 67% 45%);
+    color: hsl(183 100% 15%);
+}
+
+.input-box.error {
+    @apply ring-red-500;
+}
